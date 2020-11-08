@@ -10,9 +10,6 @@ namespace CatalogoFilmesAPI
 {
     public class Startup
     {
-
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,12 +26,9 @@ namespace CatalogoFilmesAPI
 
             services.AddCors(options =>
             {
-                options.AddPolicy(name: MyAllowSpecificOrigins,
+                options.AddPolicy("CorsPolicy",
                               builder => builder
-                              .AllowAnyOrigin()
-                              .AllowAnyHeader()
-                              .AllowAnyMethod()
-                              .AllowCredentials());
+                              .AllowAnyOrigin());
             });
 
             services.AddControllers().AddNewtonsoftJson(options =>
@@ -57,7 +51,7 @@ namespace CatalogoFilmesAPI
 
             app.UseAuthorization();
 
-            app.UseCors(MyAllowSpecificOrigins);
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {
