@@ -14,6 +14,8 @@ namespace CatalogoFilmesAPI.Models
 
         public string DataNasc { get; set; }
 
+        public string Imagem { get; set; }
+
         public List<Filme> Filmes { get; set; }
     }
 }

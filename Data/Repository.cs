@@ -40,7 +40,7 @@ namespace CatalogoFilmesAPI.Data
         {
             IQueryable<Genero> query = _context.Generos.Include(g => g.Filmes);
 
-            query = query.AsNoTracking().OrderBy(g => g.Id);
+            query = query.AsNoTracking().OrderBy(g => g.Nome);
 
             return await query.ToArrayAsync();
         }
@@ -59,7 +59,7 @@ namespace CatalogoFilmesAPI.Data
         {
             IQueryable<Filme> query = _context.Filmes.Include(f => f.Genero).Include(f => f.Diretor);
 
-            query = query.AsNoTracking().OrderBy(f => f.Id);
+            query = query.AsNoTracking().OrderBy(f => f.Titulo);
 
             return await query.ToArrayAsync();
         }
