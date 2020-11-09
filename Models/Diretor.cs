@@ -5,7 +5,6 @@ namespace CatalogoFilmesAPI.Models
 {
     public class Diretor
     {
-        [Key]
         public int Id { get; set; }
 
         public string Nome { get; set; }

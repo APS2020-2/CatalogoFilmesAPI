@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CatalogoFilmesAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20201108215610_init")]
+    [Migration("20201108234444_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
