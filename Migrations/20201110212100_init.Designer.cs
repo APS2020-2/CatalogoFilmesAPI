@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CatalogoFilmesAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20201108234444_init")]
+    [Migration("20201110212100_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,6 +55,30 @@ namespace CatalogoFilmesAPI.Migrations
                             DataNasc = "16/08/1975",
                             Imagem = "",
                             Nome = "Taika Waititi"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Bio = "John R. Leonetti nasceu em 4 de julho de 1956 na Califórnia, EUA, como John Robert Leonetti. É conhecido pelos seus trabalhos sobre Annabelle (2014), Invocação do Mal (2013) e Sobrenatural: Capítulo 2 (2013).",
+                            DataNasc = "04/06/1956",
+                            Imagem = "",
+                            Nome = "John R. Leonetti"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Bio = "Oliver Parker nasceu em 6 de setembro de 1960 em Londres, Inglaterra. É ator e diretor, conhecido por O Retorno de Johnny English (2011), Othello (1995) e Armadilhas do Coração (2002).",
+                            DataNasc = "06/09/1960",
+                            Imagem = "",
+                            Nome = "Oliver Parker"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Bio = "Darren Aronofsky nasceu em 12 de fevereiro de 1969, no Brooklyn, Nova York. Na infância, Darren sempre foi artístico: adorava filmes clássicos e, na adolescência, até passou um tempo fazendo grafite. Após o colegial, Darren foi para a Universidade de Harvard para estudar cinema (live-action e animação). Ele ganhou vários prêmios de cinema depois de concluir seu filme de tese sênior, Supermarket Sweep, estrelado por Sean Gullette , que se tornou finalista do National Student Academy Award. Aronofsky só fez um longa-metragem cinco anos depois, em fevereiro de 1996, quando começou a criar o conceito de Pi (1998). Depois do roteiro de Darren para Pi(1998) recebeu ótimas reações de amigos, iniciou a produção. O filme reuniu Aronofsky com Gullette, que desempenhou o papel principal. Isso seguiu para outros sucessos, como Réquiem para um Sonho (2000), O Lutador (2008) e Cisne Negro (2010). Mais recentemente, concluiu os filmes Noé (2014) e Mãe! (2017).",
+                            DataNasc = "12/02/1969",
+                            Imagem = "",
+                            Nome = "Darren Aronofsky"
                         });
                 });
 
@@ -146,6 +170,11 @@ namespace CatalogoFilmesAPI.Migrations
                         {
                             Id = 2,
                             Nome = "Comédia"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nome = "Terror"
                         });
                 });
 
